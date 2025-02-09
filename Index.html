@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emulador de Vozes do CapCut</title>
+    <link rel="stylesheet" href="styles.css">
+        <style>body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#vozes button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff; /* Azul */
+    color: white;
+    border: none;
+}
+
+#vozes button:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #007bff; /* Azul */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}</style>
+</head>
+<body>
+    <h1>Emulador de Vozes do CapCut</h1>
+
+    <p>Moedas: <span id="moedas">50</span></p>
+
+    <textarea id="texto" placeholder="Digite o que deseja ouvir..."></textarea>
+
+    <h3>Escolha uma voz:</h3>
+    <div id="vozes">
+        <button class="gratis" onclick="selecionarVoz('Masculino', 0)">Masculino (Grátis)</button>
+        <button class="gratis" onclick="selecionarVoz('Masculino 2', 0)">Masculino 2 (Grátis)</button>
+        <button class="gratis" onclick="selecionarVoz('Feminino', 0)">Feminino (Grátis)</button>
+        
+        <button onclick="selecionarVoz('Lucas', 10)">Lucas (10 moedas)</button>
+        <button onclick="selecionarVoz('Criança Fofa', 15)">Criança Fofa (15 moedas)</button>
+        <button onclick="selecionarVoz('Mulher Dinâmica', 20)">Mulher Dinâmica (20 moedas)</button>
+        <button onclick="selecionarVoz('Mulher Doce', 12.5)">Mulher Doce (12,5 moedas)</button>
+        <button onclick="selecionarVoz('Júlia', 20)">Júlia (20 moedas)</button>
+        <button onclick="selecionarVoz('Ana', 20)">Ana (20 moedas)</button>
+    </div>
+
+    <button onclick="ouvirTexto()">Ouvir</button>
+    <button onclick="assistirAnuncio()">Assistir Anúncio (Ganhar moedas)</button>
+
+    <script src="ouvir.js"></script>
+</body>
+</html>
